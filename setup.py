@@ -7,10 +7,10 @@ e = Extension(
     "equal_A_B",
     sources=[
         "equal_A_repeat_B_indices.pyx",
-        "equal_A_repeat_B_indices.c",
+        "equal_A_repeat_B_indices_cimpl.c",
     ],
     include_dirs=[np.get_include()],
-    extra_compile_args=["-O3", "-Rpass=loop-vectorize"],
+    extra_compile_args=["-O3"],
 )
 
 setup(
